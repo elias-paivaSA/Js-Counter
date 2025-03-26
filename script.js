@@ -6,28 +6,19 @@ const increase = document.getElementById("increase");
 const reset = document.getElementById("reset");
 
 reset.addEventListener("click", (event) => {
-    if (number.innerHTML !== 0) {
-        number.innerHTML = 0;
-        number.style.color = "black"
-    };
-    
+    if (number.innerHTML !== 0) number.innerHTML = 0;
+    if (number.innerHTML == 0) number.style.color = "black"
 });
 
 increase.addEventListener("click", (event) => {
-    if (number.innerHTML >= 0 || number.innerHTML < 0) {
-        number.innerHTML++
-        number.style.color = "purple"
-    };
-    
+    if (number.innerHTML >= 0 || number.innerHTML < 0) number.innerHTML++
+    if (number.innerHTML > 0) number.style.color = "purple"
 });
 
 decrease.addEventListener("click", (event) => {
-    if (number.innerHTML <= 0 || number.innerHTML > 0) {
+    if (number.innerHTML <= 0 || number.innerHTML > 0)
         number.innerHTML--
-        number.style.color = "red"
-    };
-    
-    
+    if (number.innerHTML < 0) number.style.color = "red"
 });
 
 // && and operator
